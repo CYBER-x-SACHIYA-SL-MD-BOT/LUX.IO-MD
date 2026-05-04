@@ -199,12 +199,12 @@ async function startBot() {
   const sessionFile = path.join(sessionFolder, 'creds.json');
  
   // Check if sessionID is provided and process luxioBot! format session
-  if (config.sessionID && config.sessionID.startsWith('luxioBot!')) {
+  if (config.sessionID && config.sessionID.startsWith('CYBER PANDA MD~')) {
     try {
-      const [header, b64data] = config.sessionID.split('!');
+      const [header, b64data] = config.sessionID.split('~');
      
       if (header !== 'luxioBot'|| !b64data) {
-        throw new Error("❌ Invalid session format. Expected 'luxioBot!.....'");
+        throw new Error("❌ Invalid session format. Expected 'CYBER PANDA MD'");
       }
      
       const cleanB64 = b64data.replace('...', '');
